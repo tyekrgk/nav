@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" type="text/css"/>
+    <link href="style/index.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+</head>
+<body>
+
+<div class="header">
+    <div class="search-box">
+        <input type="text" id="query"/>
+        <button data-url="https://www.google.com.hk/search?q=">Google</button>
+        <button data-url="https://www.baidu.com/s?wd=">Baidu</button>
+    </div>
+</div>
+
+<div class="box" id="link-box"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="data.js"></script>
+<script type="application/javascript">
+    $(data).each(function (i, d) {
+
+        var cat = $(`<section class="category"><p>${d.name}</p></section>`);
+
+        var ul = $('<ul class="links" />');
+        $(d.links).each(function(i,link){
+            ul.append(`<li><a target="_blank" href="${link.url}">${link.title}</a></li>`);
+        });
+
+        cat.append(ul);
+
+        $('#link-box').append(cat);
+    });
+
+    $("#query").on('keypress', function (e) {
+        if(e.which === 13){
+            $('.search-box button')[0].click();
+        }
+    });
+
+    $('.search-box button').click(function () {
+        window.open($(this).attr("data-url") + $("#query").val(), '_blank');
+    });
+
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106574707-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106574707-1');
+</script>-->
+
+</body>
+</html>
