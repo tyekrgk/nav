@@ -68,6 +68,9 @@ var data = [{
         }, {
             "title": "JSBeautifier",
             "url": "http://jsbeautifier.org/"
+        },{
+             "title": "BeautifyConverter",
+             "url":"https://www.beautifyconverter.com/"
         }, {
             "title": "站长工具",
             "url": "http://tool.chinaz.com/"
