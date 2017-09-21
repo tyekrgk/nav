@@ -170,6 +170,9 @@ var data = [{
     }, {
         "name": "安全",
         "links": [{
+             "title": "0x00sec",
+            "url": "https://0x00sec.org/top"
+        },{
             "title": "MottoIN",
             "url": "http://www.mottoin.com/"
         }, {
