@@ -51,7 +51,9 @@ var data = [{
     }, {
         "title": "新闻",
         "url": "http://www.people.com.cn/"
-
+    },{
+        "title": "HackerOne",
+        "url":"https://hackerone.com/"
     }]
 },
     {
