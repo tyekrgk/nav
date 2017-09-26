@@ -130,6 +130,18 @@ var data = [{
         }, {
             "title": "二维码",
             "url": "http://jiema.wwei.cn/"
+        },{
+             "title": "FlightAware",
+            "url": "http://flightaware.com"
+        },{
+             "title": "短信接收",
+            "url": "http://receivefreesms.com/"
+        },{
+              "title": "企业信用公示",
+            "url": "http://www.gsxt.gov.cn/"
+        },{
+            "title": "Haveibeenpwned",
+            "url": "https://haveibeenpwned.com/"
         }]
     }, {
         "name": "文档",
